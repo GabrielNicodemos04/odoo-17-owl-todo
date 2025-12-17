@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Odoo
+*.log
+.odoo
+.env
+
+# Node / Assets
+node_modules/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

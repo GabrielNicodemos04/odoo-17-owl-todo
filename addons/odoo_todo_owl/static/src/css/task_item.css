@@ -1,0 +1,27 @@
+.o_todo_owl_app .task-item {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.o_todo_owl_app .task-item:hover {
+    background-color: #eef1f4;
+}
+
+/* Checkbox maior e mais visível */
+.o_todo_owl_app .task-checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+/* Texto normal */
+.o_todo_owl_app .task-text {
+    font-size: 0.95rem;
+}
+
+/* Texto concluído */
+.o_todo_owl_app .task-done {
+    text-decoration: line-through;
+    color: #6c757d;
+    opacity: 0.8;
+}

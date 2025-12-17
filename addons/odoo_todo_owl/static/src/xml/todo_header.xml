@@ -1,0 +1,9 @@
+<t t-name="odoo_todo_owl.TodoHeader">
+    <div class="todo-header">
+        <strong>Total:</strong> <t t-esc="store.total"/>
+        |
+        <strong>Concluídas:</strong> <t t-esc="store.done"/>
+        |
+        <strong>Pendentes:</strong> <t t-esc="store.pending"/>
+    </div>
+</t>

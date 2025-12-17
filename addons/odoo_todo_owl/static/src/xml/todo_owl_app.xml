@@ -1,0 +1,25 @@
+<templates xml:space="preserve">
+    <t t-name="odoo_todo_owl.TodoOwlApp">
+        <div class="o_todo_owl_app container mt-3">
+            <TodoHeader />
+
+            <div class="input-group mb-3 mt-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nova tarefa..."
+                    t-model="state.newTask"
+                />
+                <button class="btn btn-primary" t-on-click="addTask">
+                    Adicionar
+                </button>
+            </div>
+
+            <TaskList
+                tasks="store.tasks"
+                onToggle="toggleDone"
+                onDelete="removeTask"
+            />
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,26 @@
+<t t-name="odoo_todo_owl.TaskItem">
+    <div class="task-item d-flex align-items-center mb-2 p-2 rounded">
+        <div class="form-check me-2">
+            <input
+                type="checkbox"
+                class="form-check-input"
+                t-att-checked="props.task.is_done"
+                t-on-change="() => props.onToggle(props.task)"
+            />
+        </div>
+
+        <span
+            class="task-text flex-grow-1"
+            t-att-class="props.task.is_done ? 'task-done' : ''"
+        >
+            <t t-esc="props.task.name"/>
+        </span>
+
+        <button
+            class="btn btn-sm btn-outline-secondary ms-2"
+            t-on-click="() => props.onDelete(props.task.id)"
+        >
+            🗑️
+        </button>
+    </div>
+</t>

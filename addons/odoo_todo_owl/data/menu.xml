@@ -1,0 +1,14 @@
+<odoo>
+    <menuitem id="menu_todo_root" name="To-do OWL"/>
+
+    <record id="action_todo_owl" model="ir.actions.client">
+        <field name="name">To-do OWL</field>
+        <field name="tag">todo_owl_app</field>
+    </record>
+
+    <menuitem
+        id="menu_todo_app"
+        name="To-do Interno"
+        parent="menu_todo_root"
+        action="action_todo_owl"/>
+</odoo>

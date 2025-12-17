@@ -1,0 +1,19 @@
+<templates xml:space="preserve">
+    <t t-name="odoo_todo_owl.TaskList">
+        <ul class="list-group">
+            <t t-if="props.tasks.length === 0">
+                <li class="list-group-item text-muted text-center">
+                    Nenhuma tarefa cadastrada
+                </li>
+            </t>
+
+            <t t-foreach="props.tasks" t-as="task" t-key="task.id">
+                <TaskItem
+                    task="task"
+                    onToggle="props.onToggle"
+                    onDelete="props.onDelete"
+                />
+            </t>
+        </ul>
+    </t>
+</templates>
