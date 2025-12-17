@@ -35,7 +35,6 @@ export class TodoOwlApp extends Component {
         );
 
         this.store.tasks.splice(0, this.store.tasks.length, ...tasks);
-        console.log("Loaded tasks:", this.store.tasks);
     }
 
     async addTask() {
@@ -56,9 +55,7 @@ export class TodoOwlApp extends Component {
         this.state.newTask = "";
     }
 
-    removeTask = async (taskId) => {
-        console.log("Removing task:", taskId);
-        
+    removeTask = async (taskId) => {        
         await this.orm.unlink("todo.task", [taskId]);
         const index = this.store.tasks.findIndex(task => task.id === taskId);
         if (index !== -1) {
@@ -67,8 +64,6 @@ export class TodoOwlApp extends Component {
     };
 
     toggleDone = async (task) => {
-        console.log("Toggling task:", task);
-
         await this.orm.write("todo.task", [task.id], {
             is_done: !task.is_done,
         });
